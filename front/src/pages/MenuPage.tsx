@@ -9,9 +9,9 @@ function MenuPage() {
       <Link to="/pedidos"><button>Todos os Pedidos</button></Link>
       <div>
         <br/>
-        <button>Pratos</button>
-        <button>Lanches</button>
-        <button>Pizzas</button>
+        <Link to="/menu/pratos"><button>Pratos</button></Link>
+        <Link to="/menu/lanches"><button>Lanches</button></Link>
+        <Link to="/menu/pizzas"><button>Pizzas</button></Link>
       </div>
     </>
   )

@@ -20,14 +20,14 @@ function App(): JSX.Element {
         </Switch>
 
         <Switch>
-          <Route path="/menu/:food">
-            <Foods/>
+          <Route path="/menu">
+            <Menu/>
           </Route>
         </Switch>
 
         <Switch>
-          <Route path="/menu">
-            <Menu/>
+          <Route path="/menu/:food">
+            <Foods/>
           </Route>
         </Switch>
 
