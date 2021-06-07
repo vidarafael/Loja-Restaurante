@@ -1,5 +1,5 @@
 import {Router} from 'express'
-import {lanche, pizza, prato} from '../controllers/controler'
+import {lanche, pizza, prato} from '../controllers/foodController'
 
 const Route = Router()
 

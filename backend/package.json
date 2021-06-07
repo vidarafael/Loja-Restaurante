@@ -4,7 +4,9 @@
   "main": "index.ts",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts"
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/server.ts",
+    "front": "yarn --cwd ../front run start",
+    "start": "concurrently \"yarn dev\" \"yarn front\""
   },
   "dependencies": {
     "concurrently": "^6.2.0",
