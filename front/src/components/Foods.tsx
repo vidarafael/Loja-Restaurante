@@ -1,20 +1,19 @@
 import React, {useEffect, useState} from 'react';
-import { useParams, useRouteMatch } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import {ADD_REQUEST} from '../actions/foodAction'
+import { IFood } from '../models/Food'
 
 interface ParamTypes {
   food: string
 }
 
-interface Teste {
-  sabor: String, 
-  custo: Number, 
-  food: String
-}
-
 function Foods(): JSX.Element {
+
+  const dispatch = useDispatch() 
+
   const [food, setFood] = useState([])
   const params = useParams<ParamTypes>().food
-  // const match = useRouteMatch()
   
   useEffect(() => {
     async function fetchData() {
@@ -23,7 +22,7 @@ function Foods(): JSX.Element {
                 `http://localhost:3000/${params}`
             );
             const json = await response.json();
-            setFood(json.map(function(it: Teste) {
+            setFood(json.map(function(it: IFood) {
               return it
             }));
         } catch (e) {
@@ -33,13 +32,17 @@ function Foods(): JSX.Element {
     fetchData();
 }, [params]);
 
-  
+  function handleClick(item: IFood) {
+    console.log(item)
+    
+  }
 
   return (
     <>
       <ul>
-        {food.map((it: Teste, index) => <li key={index}>
-          {it.sabor}, valor: {it.custo}
+        {food.map((it: IFood, index) => 
+          <li key={index}>
+            {it.nome}, valor: {it.custo} <button onClick={() => {dispatch(ADD_REQUEST(it))} }>+</button>
           </li>)}
       </ul>
     </>
