@@ -1,6 +1,7 @@
 import React from 'react';
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
+import './style.css'
 
 import {BrowserRouter as BwRouter, Switch, Route} from 'react-router-dom'
 import foodReducer from './reducer/foodReducer'
