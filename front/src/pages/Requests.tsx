@@ -10,13 +10,6 @@ interface IFoodNew {
   quantidade: number
 }
 
-interface IFood {
-  id: string,
-  nome: string, 
-  custo: number, 
-  food: string
-}
-
 function Requests() {
   const comidas = useSelector(state => state) as IFoodNew[] 
   useEffect(() => {
