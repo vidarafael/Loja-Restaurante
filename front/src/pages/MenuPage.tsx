@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom'
+import {useSelector} from 'react-redux'
 
 function MenuPage() {
+  // const comidas = useSelector((state) => state)
+  // useEffect(() => {
+  //   console.log(comidas)
+  // }, [comidas])
+
   return (
     <>
       <h1>Página de Pedidos</h1>

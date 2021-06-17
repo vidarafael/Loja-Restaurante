@@ -33,7 +33,7 @@ function Foods(): JSX.Element {
 }, [params]);
 
   function handleClick(item: IFood) {
-    console.log(item)
+    console.log(item, food)
     
   }
 
@@ -42,7 +42,7 @@ function Foods(): JSX.Element {
       <ul>
         {food.map((it: IFood, index) => 
           <li key={index}>
-            {it.nome}, valor: {it.custo} <button onClick={() => {dispatch(ADD_REQUEST(it))} }>+</button>
+            {it.nome}, valor: {it.custo} <button onClick={() => {dispatch(ADD_REQUEST(it))}}>+</button>
           </li>)}
       </ul>
     </>

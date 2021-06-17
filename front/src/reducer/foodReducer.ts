@@ -16,7 +16,11 @@ function foodReducer(state:any = [], action: any) {
   switch (action.type) {
     case 'ADD_REQUEST':
       const currentItem = state.find((it: any) => it.id === action.payload.id )
-      
+      const acumulador = state.reduce((accumulator: any, item: any) => {
+        const remember = item.custo * item.quantidade
+        return accumulator + remember
+      }, 0)
+      console.log(state)
       if(!currentItem) {
         return [...state, action.payload]
       } else {
@@ -26,7 +30,21 @@ function foodReducer(state:any = [], action: any) {
           }
           return item
         })
-      }      
+      }
+    
+    case 'DECREMENT_QUANTITY':
+      const currentItemDecrement = state.find((item: any) => item.id === action.payload)
+      if(currentItemDecrement.quantidade <= 1) {
+        return state.filter((item: any) => item.id !== action.payload)
+      }else {
+        return state.map((item: any) => {
+          if(item.id === action.payload) {
+            item.quantidade -= 1
+          }
+          return item
+        })
+      }
+      
   
     default:
       return state;

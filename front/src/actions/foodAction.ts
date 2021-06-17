@@ -1,4 +1,7 @@
 export function ADD_REQUEST(item: any) {
-  item.quantidade = 1
   return {type: "ADD_REQUEST", payload: item}
+}
+
+export function  DECREMENT_QUANTITY(id: any) {
+  return {type: "DECREMENT_QUANTITY", payload: id}
 }
