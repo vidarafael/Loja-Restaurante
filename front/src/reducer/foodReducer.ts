@@ -1,4 +1,3 @@
-/* eslint-disable import/no-anonymous-default-export */
 // interface IFood {
 //   id: string,
 //   nome: string, 
@@ -40,7 +39,6 @@ function foodReducer(state:any = [], action: any) {
         })
       }
       
-  
     default:
       return state;
   }

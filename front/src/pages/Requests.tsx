@@ -20,11 +20,7 @@ function Requests() {
     const remember = item.custo * item.quantidade
     return accumulator + remember
   }, 0)
-  useEffect(() => {
-    
-    console.log("Total:",acumulador)
-    console.log(comidas)
-  }, [comidas])
+  const verifyComidas = comidas.find(it => it)
 
   const dispatch = useDispatch()
   
@@ -51,7 +47,7 @@ function Requests() {
       </ul>
 
       <div>
-        Total: {acumulador}
+        {verifyComidas ? <span> Total: {acumulador}</span> : <h1>Sem pedidos :(</h1>}
       </div>
     </>
   )

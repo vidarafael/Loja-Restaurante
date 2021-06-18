@@ -15,14 +15,16 @@ interface IFoodNew {
 
 function Cart(props: any) {
   const state = useSelector(state => state) as IFoodNew[]
-  const stateFind = state.find(it => it)
+  const verifyState = state.find(it => it)
   const elementosState = state.reduce((accumulator: any, item: any) => {
     const quantity = item.quantidade
     return accumulator + quantity
   }, 0)
+
+
   return (
     <>
-      {stateFind ? <Link className="link" to="/pedidos"><button className="Cart"><FaShoppingCart/>{elementosState}</button></Link>  : <></>}
+      {verifyState ? <Link className="link" to="/pedidos"><button className="Cart"><FaShoppingCart/>{elementosState}</button></Link>  : <></>}
     </>
   )
 }

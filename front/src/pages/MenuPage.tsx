@@ -1,13 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom'
-import {useSelector} from 'react-redux'
 import Cart from '../components/Cart'
 
 function MenuPage() {
-  // const comidas = useSelector((state) => state)
-  // useEffect(() => {
-  //   console.log(comidas)
-  // }, [comidas])
 
   return (
     <>

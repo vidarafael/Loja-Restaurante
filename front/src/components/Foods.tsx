@@ -9,9 +9,7 @@ interface ParamTypes {
 }
 
 function Foods(): JSX.Element {
-
   const dispatch = useDispatch() 
-
   const [food, setFood] = useState([])
   const params = useParams<ParamTypes>().food
   
@@ -31,11 +29,6 @@ function Foods(): JSX.Element {
     };
     fetchData();
 }, [params]);
-
-  function handleClick(item: IFood) {
-    console.log(item, food)
-    
-  }
 
   return (
     <>
