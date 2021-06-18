@@ -22,7 +22,7 @@ function Cart(props: any) {
   }, 0)
   return (
     <>
-      {stateFind ? <Link className="link" to="/pedidos"><button className="Cart"><FaShoppingCart/>{elementosState}</button></Link>  : <h1>Teste</h1>}
+      {stateFind ? <Link className="link" to="/pedidos"><button className="Cart"><FaShoppingCart/>{elementosState}</button></Link>  : <></>}
     </>
   )
 }

@@ -16,11 +16,6 @@ function foodReducer(state:any = [], action: any) {
   switch (action.type) {
     case 'ADD_REQUEST':
       const currentItem = state.find((it: any) => it.id === action.payload.id )
-      const acumulador = state.reduce((accumulator: any, item: any) => {
-        const remember = item.custo * item.quantidade
-        return accumulator + remember
-      }, 0)
-      console.log(state)
       if(!currentItem) {
         return [...state, action.payload]
       } else {

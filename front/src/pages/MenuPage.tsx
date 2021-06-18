@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
+import Cart from '../components/Cart'
 
 function MenuPage() {
   // const comidas = useSelector((state) => state)
@@ -19,6 +20,8 @@ function MenuPage() {
         <Link to="/menu/lanches"><button>Lanches</button></Link>
         <Link to="/menu/pizzas"><button>Pizzas</button></Link>
       </div>
+        <Cart/>
+
     </>
   )
 }
