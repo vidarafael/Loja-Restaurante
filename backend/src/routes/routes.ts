@@ -1,12 +1,17 @@
 import {Router} from 'express'
-import {lanche, pizza, prato} from '../controllers/foodController'
+import { FoodController } from '../controllers/foodController'
+// import {lanche, pizza, prato} from '../controllers/foodController'
 
-const Route = Router()
+const router = Router()
 
-Route.get('/lanches', lanche)
-Route.get('/pizzas', pizza)
-Route.get('/pratos', prato)
+const foodController = new FoodController
 
-export default Route
+router.post("/food", foodController.createFood)
+
+// Route.get('/lanches', lanche)
+// Route.get('/pizzas', pizza)
+// Route.get('/pratos', prato)
+
+export default router
 
 
