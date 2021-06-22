@@ -1,30 +1,37 @@
 import {Request, Response} from 'express'
-import { getRepository } from "typeorm"
-import { Food } from "../models/Food"
+import { FoodService } from '../services/foodServices'
+
 
 class FoodController {
   async createFood(req: Request, res: Response) {
-    const { nome, valor, tipo } = req.body
+    try {
+      const { nome, valor, tipo } = req.body
 
-    const foodsRepository = getRepository(Food)
+      const foodService = new FoodService()
 
-    const foodAlreadyExists = await foodsRepository.findOne({  
-      nome
-    })
+      const food = await foodService.createFood({ nome, valor, tipo })
 
-    if(foodAlreadyExists) {
-      return res.status(400).send("food already exists")
+      return res.json(food)
+
+    }catch (err) {
+      return res.status(400).json({error: "Food already exists"})
     }
+  }
 
-    const food = foodsRepository.create({
-      nome, 
-      valor, 
-      tipo
-    })
+  async getAllFoods(req: Request, res: Response) {
+    try {
+      const {tipo}  = req.params
+      console.log(tipo)
 
-    await foodsRepository.save(food)
+      const foodService = new FoodService()
 
-    return res.json(food)
+      const allFoods = await foodService.getAllFoods(tipo)
+
+      return res.json(allFoods)
+
+    }catch (err) {
+      return res.send("Type food not exists")
+    }
   }
 }
 
