@@ -1,0 +1,44 @@
+.card {
+  background-color: rgb(252, 252, 252);
+  min-width: 240px;
+  width: 40%;
+  margin: 32px auto;
+  text-align: center;
+  padding: 8px;
+  border: 1px solid rgb(184, 182, 182);
+  transition: 0.3s;
+}
+
+.card:hover {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+.nameTitleFood {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.card img {
+  margin: 16px;
+  width: 150px;
+}
+
+.card button {
+  margin: 16px;
+  padding: 8px;
+  width: 50%;
+  max-width: 200px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  color: white;
+  border: 1px solid black;
+  transition: 0.3s;
+}
+
+.card button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}

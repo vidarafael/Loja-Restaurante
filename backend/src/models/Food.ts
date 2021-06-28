@@ -16,6 +16,9 @@ class Food {
   @Column()
   tipo: string;
 
+  @Column()
+  imagem: string;
+
   @Column({ default: 1 })
   quantidade: number;
 

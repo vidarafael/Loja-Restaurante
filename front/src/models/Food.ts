@@ -1,6 +1,7 @@
 export interface IFood {
   id: string,
   nome: string, 
-  custo: number, 
-  food: string
+  valor: number, 
+  food: string,
+  imagem: string,
 }

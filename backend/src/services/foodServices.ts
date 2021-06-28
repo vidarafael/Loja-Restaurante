@@ -5,10 +5,11 @@ interface IFood {
   nome: string;
   valor: number;
   tipo: string;
+  imagem: string;
 }
 
 class FoodService {
-  async createFood({ nome, valor, tipo }: IFood) {
+  async createFood({ nome, valor, tipo, imagem }: IFood) {
     const foodsRepository = getRepository(Food)
 
     if(!nome) {
@@ -26,7 +27,8 @@ class FoodService {
     const food = foodsRepository.create({
       nome, 
       valor, 
-      tipo
+      tipo,
+      imagem
     })
 
     await foodsRepository.save(food)
@@ -34,7 +36,7 @@ class FoodService {
     return food
   }
 
-  async getAllFoods(tipo: any) {
+  async getAllFoods(tipo: string) {
     const foodsRepository = getRepository(Food)
 
     const foodsType = await foodsRepository.find({ tipo })

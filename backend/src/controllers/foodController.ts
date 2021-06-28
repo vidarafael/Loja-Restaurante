@@ -5,11 +5,11 @@ import { FoodService } from '../services/foodServices'
 class FoodController {
   async createFood(req: Request, res: Response) {
     try {
-      const { nome, valor, tipo } = req.body
+      const { nome, valor, tipo, imagem } = req.body
 
       const foodService = new FoodService()
 
-      const food = await foodService.createFood({ nome, valor, tipo })
+      const food = await foodService.createFood({ nome, valor, tipo, imagem })
 
       return res.json(food)
 
@@ -21,7 +21,6 @@ class FoodController {
   async getAllFoods(req: Request, res: Response) {
     try {
       const {tipo}  = req.params
-      console.log(tipo)
 
       const foodService = new FoodService()
 

@@ -7,7 +7,7 @@ const router = Router()
 const foodController = new FoodController
 
 router.post("/food", foodController.createFood)
-router.get("/food/:tipo", foodController.getAllFoods)
+router.get("/:tipo", foodController.getAllFoods)
 
 // Route.get('/lanches', lanche)
 // Route.get('/pizzas', pizza)

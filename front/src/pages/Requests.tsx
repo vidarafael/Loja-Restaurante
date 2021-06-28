@@ -8,7 +8,7 @@ import { ADD_REQUEST, DECREMENT_QUANTITY } from '../actions/foodAction';
 interface IFoodNew {
   id: string,
   nome: string, 
-  custo: number, 
+  valor: number, 
   food: string,
   quantidade: number,
   total: number
@@ -17,7 +17,7 @@ interface IFoodNew {
 function Requests() {
   const comidas = useSelector(state => state) as IFoodNew[] 
   const acumulador = comidas.reduce((accumulator: any, item: any) => {
-    const remember = item.custo * item.quantidade
+    const remember = item.valor * item.quantidade
     return accumulator + remember
   }, 0)
   const verifyComidas = comidas.find(it => it)
@@ -27,7 +27,7 @@ function Requests() {
   return (
     <>
       <h1>Todos os pedidos</h1>
-      <Link to="/menu/pratos"><button>Voltar</button></Link> 
+      <Link to="/menu/prato"><button>Voltar</button></Link> 
       <ul>
         {comidas.map((it:IFoodNew, index ) => { 
           return (
@@ -40,14 +40,14 @@ function Requests() {
                   <button onClick={() => {dispatch(DECREMENT_QUANTITY(it.id))}} className="buttonIncrements"><BsCaretDownFill/></button>
                 </div>
               </div>
-              Valor: R${(it.custo * it.quantidade).toFixed(2)}<br/><br/>
+              Valor: R${(it.valor * it.quantidade).toFixed(2)}<br/><br/>
             </li>
           )
         })}
       </ul>
 
       <div>
-        {verifyComidas ? <span> Total: {acumulador}</span> : <h1>Sem pedidos :(</h1>}
+        {verifyComidas ? <span> Total: {acumulador.toFixed(2)}</span> : <h1>Sem pedidos :(</h1>}
       </div>
     </>
   )

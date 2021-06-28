@@ -11,9 +11,9 @@ function MenuPage() {
       <Link to="/pedidos"><button>Todos os Pedidos</button></Link>
       <div>
         <br/>
-        <Link to="/menu/pratos"><button>Pratos</button></Link>
-        <Link to="/menu/lanches"><button>Lanches</button></Link>
-        <Link to="/menu/pizzas"><button>Pizzas</button></Link>
+        <Link to="/menu/prato"><button>Pratos</button></Link>
+        <Link to="/menu/lanche"><button>Lanches</button></Link>
+        <Link to="/menu/pizza"><button>Pizzas</button></Link>
       </div>
         <Cart/>
 
