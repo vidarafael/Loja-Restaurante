@@ -4,7 +4,6 @@ import { useDispatch } from 'react-redux'
 import {ADD_REQUEST} from '../actions/foodAction'
 import { IFood } from '../models/Food'
 import { Card } from "./Card"
-import { isTokenKind } from 'typescript';
 
 interface ParamTypes {
   food: string

@@ -4,6 +4,7 @@ import {useSelector} from 'react-redux'
 import { BsCaretUpFill, BsCaretDownFill } from "react-icons/bs"
 import {useDispatch} from 'react-redux'
 import { ADD_REQUEST, DECREMENT_QUANTITY } from '../actions/foodAction';
+import {Header} from "../components/Header"
 
 interface IFoodNew {
   id: string,
@@ -26,8 +27,11 @@ function Requests() {
   
   return (
     <>
-      <h1>Todos os pedidos</h1>
-      <Link to="/menu/prato"><button>Voltar</button></Link> 
+      <Header>
+        <h1>Todos os pedidos</h1>
+        <Link to="/menu/prato"><button>Voltar</button></Link> 
+      </Header>
+      
       <ul>
         {comidas.map((it:IFoodNew, index ) => { 
           return (
