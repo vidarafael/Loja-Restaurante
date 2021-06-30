@@ -1,0 +1,67 @@
+a {
+  text-decoration: none;
+}
+
+.header-menuPage {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  color: white;
+}
+
+.header-menuPage button {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+
+.header-menuPage button:hover {
+  color: red;
+}
+
+.seeMenu {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seeMenu h1 {
+  font-size: 58px;
+}
+
+.seeMenu img {
+  width: 150px;
+}
+
+.btn-foods {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-foods button {
+  width: 100px;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: rgb(252, 252, 252);
+  color: red;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px black;
+  transition: 0.3s;
+}
+
+.btn-foods button:hover {
+  color: rgb(158, 17, 17);
+  background-color: rgb(199, 193, 193);
+}
