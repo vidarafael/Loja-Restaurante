@@ -1,0 +1,43 @@
+@keyframes slideUpper {
+  from {
+    transform: translate3d(0px, 20px, 0);
+  }
+
+  to {
+    transform: translate3d(0px, 0px, 0);
+  }
+}
+
+.link {
+  animation: slideUpper 0.5s 0s;
+
+  position: fixed;
+  display: block;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: red;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.link:hover {
+  background-color: rgb(199, 0, 0);
+}
+
+.content-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 22px;
+}
+
+@media (max-width: 576px) {
+  .content-cart {
+    font-size: 18px;
+  }
+}

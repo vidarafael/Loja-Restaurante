@@ -10,7 +10,7 @@ export function Card({...props}) {
 
       </div>
       <div>
-       <b>Valor:</b>  R${props.value}
+       <span className="nameValueFood"><b>Valor:</b>  R${props.value}</span>
       </div>
       <div>
         {props.children}

@@ -13,16 +13,17 @@ function MenuPage() {
       <Header>
         <div className="header-menuPage">
           <Link to="/"><button><AiFillCaretLeft/>Inicío</button></Link>
-          <h1>Empresinha</h1>
+          <h1>Macarena</h1>
           <Link to="/pedidos"><button>Ver Pedidos <AiOutlineShopping/></button></Link>
         </div> 
       </Header>
 
       <div className="seeMenu">
-        <h1>Veja Nosso Cardápio</h1>
-        <img src={Food} alt="" />
+        <span>Veja Nosso Cardápio </span>
+        <img src={Food} alt="imagem de comida" />
+        
       </div>
-
+      
       <div className="btn-foods">       
         <Link to="/menu/prato"><button>Pratos</button></Link>
         <Link to="/menu/lanche"><button>Lanches</button></Link>

@@ -1,6 +1,9 @@
-a {
-  text-decoration: none;
-}
+/*
+    background-image: url("../Assets/images/backgroundFood.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+*/
 
 .header-menuPage {
   display: flex;
@@ -29,14 +32,18 @@ a {
 }
 
 .seeMenu {
-  margin: 50px 0;
+  text-align: center;
+  width: 80%;
+  margin: 100px auto 50px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.seeMenu h1 {
-  font-size: 58px;
+.seeMenu span {
+  display: inline-block;
+  font-size: 48px;
+  font-weight: bold;
 }
 
 .seeMenu img {
@@ -64,4 +71,10 @@ a {
 .btn-foods button:hover {
   color: rgb(158, 17, 17);
   background-color: rgb(199, 193, 193);
+}
+
+@media (max-width: 576px) {
+  .seeMenu {
+    display: block;
+  }
 }
