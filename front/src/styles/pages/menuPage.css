@@ -5,32 +5,6 @@
     background-size: 20%;
 */
 
-.header-menuPage {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  color: white;
-}
-
-.header-menuPage button {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  transition: 0.3s;
-}
-
-.header-menuPage button:hover {
-  color: red;
-}
-
 .seeMenu {
   text-align: center;
   width: 80%;
@@ -76,5 +50,14 @@
 @media (max-width: 576px) {
   .seeMenu {
     display: block;
+    margin: 70px auto 50px;
+  }
+
+  .seeMenu span {
+    font-size: 44px;
+  }
+
+  .seeMenu img {
+    width: 140px;
   }
 }

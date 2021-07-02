@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import {  useSelector } from 'react-redux'
 import { BiCart } from "react-icons/bi"
 import { Link } from 'react-router-dom'
-import '../styles/cart.css'
+import '../styles/components/cart.css'
 
 
 interface IFoodNew {
@@ -38,7 +38,7 @@ function Cart(props: any) {
         <div className="content-cart">
           <div>
             <span>
-              <BiCart /> {elementosStateQuantidade} pedidos
+              <BiCart /> {elementosStateQuantidade} Pedido(s)
             </span>
           </div>
 

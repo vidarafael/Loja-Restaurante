@@ -31,11 +31,6 @@ button {
   cursor: pointer;
 }
 
-header {
-  background-image: linear-gradient(to right, rgb(173, 0, 0), rgb(255, 0, 0));
-  width: 100%;
-}
-
 .div-quantidade {
   display: flex;
   align-items: center;

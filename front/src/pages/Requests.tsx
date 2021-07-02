@@ -1,18 +1,22 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import { BsCaretUpFill, BsCaretDownFill } from "react-icons/bs"
 import {useDispatch} from 'react-redux'
 import { ADD_REQUEST, DECREMENT_QUANTITY } from '../actions/foodAction';
 import {Header} from "../components/Header"
+import { Button } from '../components/Button';
+import '../styles/pages/requestsPage.css'
+import { AiFillCaretLeft } from "react-icons/ai";
+
 
 interface IFoodNew {
   id: string,
+  imagem: string,
   nome: string, 
-  valor: number, 
-  food: string,
   quantidade: number,
-  total: number
+  tipo: string,
+  valor: number, 
 }
 
 function Requests() {
@@ -28,14 +32,16 @@ function Requests() {
   return (
     <>
       <Header>
+        <Link to="/menu/prato"><Button><AiFillCaretLeft/>Voltar</Button></Link> 
         <h1>Todos os pedidos</h1>
-        <Link to="/menu/prato"><button>Voltar</button></Link> 
+        <div></div>
       </Header>
       
       <ul>
         {comidas.map((it:IFoodNew, index ) => { 
           return (
             <li key={index}> 
+            {/* <img src={it.imagem} alt="imagem da comida" /> */}
               Nome: {it.nome}
               <div className="div-quantidade">
                 Quantidade: {it.quantidade}

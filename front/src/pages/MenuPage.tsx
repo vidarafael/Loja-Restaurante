@@ -2,7 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 import Cart from '../components/Cart'
 import {Header} from "../components/Header"
-import '../styles/menuPage.css'
+import {Button} from '../components/Button'
+import '../styles/pages/menuPage.css'
 import { AiFillCaretLeft, AiOutlineShopping } from "react-icons/ai";
 import Food from "../Assets/images/Food.png"
 
@@ -11,11 +12,9 @@ function MenuPage() {
   return (
     <>
       <Header>
-        <div className="header-menuPage">
-          <Link to="/"><button><AiFillCaretLeft/>Inicío</button></Link>
-          <h1>Macarena</h1>
-          <Link to="/pedidos"><button>Ver Pedidos <AiOutlineShopping/></button></Link>
-        </div> 
+        <Link to="/"><Button><AiFillCaretLeft/>Inicío</Button></Link>
+        <h1>Macarena</h1>
+        <Link to="/pedidos"><Button>Ver Pedidos <AiOutlineShopping/></Button></Link>
       </Header>
 
       <div className="seeMenu">
