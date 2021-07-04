@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
-import { BsCaretUpFill, BsCaretDownFill } from "react-icons/bs"
+import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai"
 import {useDispatch} from 'react-redux'
 import { ADD_REQUEST, DECREMENT_QUANTITY } from '../actions/foodAction';
 import {Header} from "../components/Header"
@@ -38,20 +38,27 @@ function Requests() {
         <div></div>
       </Header>
       
+
       <ul>
         {comidas.map((it:IFoodNew, index ) => { 
           return (
-            <li key={index}> 
-            {/* <img src={it.imagem} alt="imagem da comida" /> */}
-              Nome: {it.nome}
-              <div className="div-quantidade">
-                Quantidade: {it.quantidade}
-                <div className="div-button">
-                  <button onClick={() => {dispatch(ADD_REQUEST(it))}} className="buttonIncrements"><BsCaretUpFill/></button>
-                  <button onClick={() => {dispatch(DECREMENT_QUANTITY(it.id))}} className="buttonIncrements"><BsCaretDownFill/></button>
-                </div>
+            <li key={index} className="li-requests">  
+              <div className="div-nameFood">
+                <h1>{it.nome}</h1>
               </div>
-              Valor: R${(it.valor * it.quantidade).toFixed(2)}<br/><br/>
+              <div className="div-info">
+                <img src={it.imagem} alt="imagem da comida" />
+                <div className="div-quantidade">
+                  <h2>Quantidade:</h2>
+                  <div className="div-buttons">
+                    <button onClick={() => {dispatch(ADD_REQUEST(it))}} className="buttons-quantidade btn-increment"><AiFillPlusCircle /></button>
+                    <span>{it.quantidade}</span> 
+                    <button onClick={() => {dispatch(DECREMENT_QUANTITY(it.id))}} className="buttons-quantidade btn-decrement"><AiFillMinusCircle /></button>
+                  </div>
+                </div>
+                <h2>Valor: R${(it.valor * it.quantidade).toFixed(2)}</h2>
+              </div>
+             
             </li>
           )
         })}

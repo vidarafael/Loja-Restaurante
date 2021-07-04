@@ -20,7 +20,6 @@ function MenuPage() {
       <div className="seeMenu">
         <span>Veja Nosso Cardápio </span>
         <img src={Food} alt="imagem de comida" />
-        
       </div>
       
       <div className="btn-foods">       

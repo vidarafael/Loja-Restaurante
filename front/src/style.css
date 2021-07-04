@@ -30,24 +30,3 @@ a {
 button {
   cursor: pointer;
 }
-
-.div-quantidade {
-  display: flex;
-  align-items: center;
-}
-
-.div-button {
-  display: flex;
-  flex-direction: column;
-}
-
-.buttonIncrements {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: black;
-}
-
-.buttonIncrements:hover {
-  color: gray;
-}

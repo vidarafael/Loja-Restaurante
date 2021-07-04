@@ -7,7 +7,7 @@
 }
 
 .box {
-  width: 50%;
+  width: 40%;
   height: 50%;
   background-image: linear-gradient(to bottom, rgb(173, 0, 0), rgb(255, 0, 0));
   margin-bottom: 50px;

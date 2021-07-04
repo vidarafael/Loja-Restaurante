@@ -1,1 +1,60 @@
+.li-requests {
+  list-style: none;
+  width: 50%;
+  margin: 50px auto;
+  background: white;
+  padding: 8px;
+}
 
+.li-requests img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+.div-nameFood {
+  text-align: center;
+}
+
+.div-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 8px;
+}
+
+.div-quantidade {
+  display: flex;
+  align-items: center;
+}
+
+.div-buttons {
+  display: flex;
+  margin-left: 8px;
+  font-size: 22px;
+}
+
+.buttons-quantidade {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 22px;
+  transition: 0.3s;
+}
+
+.btn-increment {
+  color: rgb(0, 158, 0);
+}
+
+.btn-increment:hover {
+  color: rgb(1, 110, 1);
+}
+
+.btn-decrement {
+  color: red;
+}
+
+.btn-decrement:hover {
+  color: rgb(182, 0, 0);
+}
