@@ -8,6 +8,7 @@ import {Header} from "../components/Header"
 import { Button } from '../components/Button';
 import '../styles/pages/requestsPage.css'
 import { AiFillCaretLeft } from "react-icons/ai";
+import { NoItens } from '../components/NoItens'
 
 
 interface IFoodNew {
@@ -55,9 +56,8 @@ function Requests() {
           )
         })}
       </ul>
-
       <div>
-        {verifyComidas ? <span> Total: {acumulador.toFixed(2)}</span> : <h1>Sem pedidos :(</h1>}
+        {verifyComidas ? <span> Total: {acumulador.toFixed(2)}</span> : <NoItens/>}
       </div>
     </>
   )
