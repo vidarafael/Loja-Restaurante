@@ -9,6 +9,7 @@ import { Button } from '../components/Button';
 import '../styles/pages/requestsPage.css'
 import { AiFillCaretLeft } from "react-icons/ai";
 import { NoItens } from '../components/NoItens'
+import { Total } from '../components/Total'
 
 
 interface IFoodNew {
@@ -56,15 +57,16 @@ function Requests() {
                     <button onClick={() => {dispatch(DECREMENT_QUANTITY(it.id))}} className="buttons-quantidade btn-decrement"><AiFillMinusCircle /></button>
                   </div>
                 </div>
-                <h2>Valor: R${(it.valor * it.quantidade).toFixed(2)}</h2>
+                <div>
+                  <h2 className="valor">Valor: </h2><span className="dinheiro"> R${(it.valor * it.quantidade).toFixed(2)}</span>
+                </div>
               </div>
-             
             </li>
           )
         })}
       </ul>
       <div>
-        {verifyComidas ? <span> Total: {acumulador.toFixed(2)}</span> : <NoItens/>}
+        {verifyComidas ? <Total accumulator={acumulador}/> : <NoItens/>}
       </div>
     </>
   )

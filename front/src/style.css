@@ -15,10 +15,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-ul li:last-of-type {
-  margin-bottom: 60px;
-}
-
 li {
   text-decoration: none;
 }

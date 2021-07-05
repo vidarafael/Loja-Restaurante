@@ -5,6 +5,10 @@
     background-size: 20%;
 */
 
+.menu-ul li:last-of-type {
+  margin-bottom: 60px;
+}
+
 .seeMenu {
   text-align: center;
   width: 80%;

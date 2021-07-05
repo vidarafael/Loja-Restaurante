@@ -36,7 +36,7 @@ function Foods(): JSX.Element {
 
   return (
     <>
-      <ul>
+      <ul className="menu-ul">
         {food.map((it: IFood, index) => 
           <li key={index}>
             {console.log(it)}

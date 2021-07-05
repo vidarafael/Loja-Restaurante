@@ -1,0 +1,36 @@
+.div-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+
+  width: 80%;
+  max-width: 1200px;
+  margin: 0px auto 16px;
+  background: white;
+  padding: 16px 8px;
+  box-shadow: 0px 1px 3px black;
+}
+
+.div-total span {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.div-total button {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: rgb(255, 0, 0);
+  color: rgb(255, 255, 255);
+  transition: 0.3s;
+}
+
+.div-total button:hover {
+  background-color: rgb(204, 0, 0);
+}
