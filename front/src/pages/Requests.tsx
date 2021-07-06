@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
 import {useSelector} from 'react-redux'
-import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai"
+import { AiFillPlusCircle, AiFillMinusCircle, AiOutlineShopping } from "react-icons/ai"
 import {useDispatch} from 'react-redux'
 import { ADD_REQUEST, DECREMENT_QUANTITY } from '../actions/foodAction';
 import {Header} from "../components/Header"
