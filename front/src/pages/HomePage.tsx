@@ -29,6 +29,11 @@ function HomePage() {
         </div> 
       </div>
 
+      <div className="title-slide">
+        <div>
+         <h1>Venha Conferir nosso Cardápio</h1>
+        </div>
+      </div>
       <Slide/>
       
       <Link to="menu/prato"><button>Fazer Pedido</button></Link>
