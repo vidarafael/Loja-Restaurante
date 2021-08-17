@@ -1,4 +1,4 @@
-.swiperzim {
+.div-swiper {
   border-top: 25px solid black;
   border-bottom: 25px solid black;
   border-left: 10px solid black;
@@ -12,12 +12,12 @@
   height: 550px;
 }
 
-.slidezim {
+.slide {
   width: 100%;
   height: 100%;
 }
 
-.slidezim img {
+.slide img {
   width: 100%;
   height: 100%;
 }

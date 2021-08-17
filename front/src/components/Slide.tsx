@@ -29,7 +29,7 @@ export function Slide(props: any) {
 
   return (
     <>
-      <div className="swiperzim">
+      <div className="div-swiper">
         <Swiper 
           effect={'fade'} autoplay={{
           "delay": 1000,
@@ -38,7 +38,7 @@ export function Slide(props: any) {
           speed={1000}
           loop={true}
           allowTouchMove={false}
-          className="slidezim"
+          className="slide"
         >
           {arrayDeImg.map((e, index) => {
             return <SwiperSlide className="swiperSlide"><img src={e} alt="index"/> <h1>{index}</h1></SwiperSlide>
